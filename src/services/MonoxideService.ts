@@ -1,5 +1,5 @@
 import { Reference } from "../models/Reference";
-import { ControlEvaluation } from "./ControlEvaluation";
+import { ControlEvaluation } from "./ControlEvaluationService";
 import { Log } from "../models/Log";
 
 export class Monoxide extends ControlEvaluation {

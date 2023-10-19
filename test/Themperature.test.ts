@@ -1,4 +1,4 @@
-import { Themperature } from "../src/services/Themperature";
+import { Themperature } from "../src/services/ThemperatureService";
 import { Log } from "../src/models/Log";
 import { Reference } from "../src/models/Reference";
 

@@ -1,11 +1,11 @@
 import { LogList } from "../models/LogList";
 import { PropertiesKey } from "../models/Properties";
 import { Reference } from "../models/Reference";
-import { Humidity } from "./Humidity";
+import { Humidity } from "./HumidityService";
 import Log from "./LogService";
-import { Monoxide } from "./Monoxide";
+import { Monoxide } from "./MonoxideService";
 import { ReferenceService } from "./ReferenceService";
-import { Themperature } from "./Themperature";
+import { Themperature } from "./ThemperatureService";
 
 class LogListService {
   private _logs: LogList;

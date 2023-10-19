@@ -1,4 +1,4 @@
-import { ControlEvaluation } from "../src/services/ControlEvaluation";
+import { ControlEvaluation } from "../src/services/ControlEvaluationService";
 import { Log } from "../src/models/Log";
 
 describe("ControlEvaluation", () => {
