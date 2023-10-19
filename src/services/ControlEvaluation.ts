@@ -13,7 +13,7 @@ export class ControlEvaluation {
     return this.getSum(logs) / logs.length;
   }
 
-  private getSum(logs: Array<Log>) {
+  getSum(logs: Array<Log>) {
     return logs.reduce((acc, curr) => acc + curr.value, 0);
   }
 
