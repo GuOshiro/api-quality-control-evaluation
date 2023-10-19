@@ -25,10 +25,10 @@ class LogListService {
   generateLogList(data: string): LogList {
     try {
       const mappedObj: LogList = {
-        reference: [],
-        thermometer: [],
-        humidity: [],
-        monoxide: [],
+        reference: {},
+        thermometer: {},
+        humidity: {},
+        monoxide: {},
       };
       let currentProperty: PropertiesKey = "reference";
       let propertyCustomName: string;
@@ -40,10 +40,6 @@ class LogListService {
           const splittedLine = line.split(" ");
           const propertyName = splittedLine[0] as PropertiesKey;
           const content = splittedLine[1] as string;
-          if (propertyName === "reference") {
-            mappedObj[currentProperty]["reference"] = [line];
-            return;
-          }
           if (
             properties.includes(propertyName) &&
             propertyCustomName !== content
@@ -99,6 +95,7 @@ class LogListService {
       let report: { [key: string]: string } = {};
       for (const customName in this._logs[key]) {
         let reportBycontrolEvaluationReport: { [key: string]: string } = {};
+
         if (key === "thermometer") {
           const themperature = new Themperature(
             customName,

@@ -1,9 +1,10 @@
 import { Reference } from "../models/Reference";
+import { ThemperaturePrecision } from "../models/Themperature";
 import { ControlEvaluation } from "./ControlEvaluation";
-import Log from "./LogService";
+import { Log } from "../models/Log";
 
 export class Themperature extends ControlEvaluation {
-  private _precision: "precise" | "ultra precise" | "very precise";
+  private _precision: ThemperaturePrecision;
   constructor(name: string, logs: Array<Log>, reference: Reference) {
     super(name, logs);
     this._precision = this.precisionRule(reference, logs);
@@ -12,7 +13,7 @@ export class Themperature extends ControlEvaluation {
   private precisionRule(
     reference: Reference,
     logs: Array<Log>
-  ): "precise" | "ultra precise" | "very precise" {
+  ): ThemperaturePrecision {
     const difference = Math.abs(this.avarage - reference.temperature);
     const squaredDifferences = logs.map((data) =>
       Math.pow(data.value - this.avarage, 2)
