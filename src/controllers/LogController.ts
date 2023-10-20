@@ -1,5 +1,5 @@
 import express from "express";
-import LogListService from "../services/LogListService";
+import LogListService from "../services/Log/LogListService";
 class LogController {
   static async verifyLog(req: express.Request, res: express.Response) {
     if (!req.body) {

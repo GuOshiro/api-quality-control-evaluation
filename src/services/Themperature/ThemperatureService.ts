@@ -1,7 +1,7 @@
-import { Reference } from "../models/Reference";
-import { ThemperaturePrecision } from "../models/Themperature";
-import { ControlEvaluation } from "./ControlEvaluationService";
-import { Log } from "../models/Log";
+import { Reference } from "../../models/Reference";
+import { ThemperaturePrecision } from "../../models/Themperature";
+import { ControlEvaluation } from "../Generic/ControlEvaluationService";
+import { Log } from "../../models/Log";
 
 export class Themperature extends ControlEvaluation {
   private _precision: ThemperaturePrecision;

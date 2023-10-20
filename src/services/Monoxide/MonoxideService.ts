@@ -1,6 +1,6 @@
-import { Reference } from "../models/Reference";
-import { ControlEvaluation } from "./ControlEvaluationService";
-import { Log } from "../models/Log";
+import { Reference } from "../../models/Reference";
+import { ControlEvaluation } from "../Generic/ControlEvaluationService";
+import { Log } from "../../models/Log";
 
 export class Monoxide extends ControlEvaluation {
   private _precision: "discard" | "keep";

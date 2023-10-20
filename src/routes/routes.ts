@@ -1,5 +1,6 @@
 import express from "express";
 import Log from "./LogRoutes";
+import Random from "./RandomRoutes";
 
 export default function (app: express.Express) {
   app
@@ -9,4 +10,5 @@ export default function (app: express.Express) {
     );
 
   app.use(express.json(), Log);
+  app.use(express.json(), Random);
 }

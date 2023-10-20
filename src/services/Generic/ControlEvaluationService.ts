@@ -1,4 +1,4 @@
-import { Log } from "../models/Log";
+import { Log } from "../../models/Log";
 
 export class ControlEvaluation {
   private _name: string;
